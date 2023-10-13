@@ -1,0 +1,122 @@
+<div class="popup popup-login">
+  <div class="popup__close">
+    <span class="close__line close__line-1"> </span>
+    <span class="close__line close__line-2"></span>
+  </div>
+  <h2>Log in</h2>
+  <form action="">
+    <div class="popup__email">
+      <label for=""
+        >Email
+        <input type="email" name="email" placeholder="Enter your email" />
+      </label>
+    </div>
+    <div class="popup__pass">
+      <label for=""
+        >Password
+        <input
+          type="password"
+          name="password"
+          placeholder="Enter your password"
+          id="passwordInputlogin"
+        />
+        <span class="pass__eye">
+          <i class="fa fa-eye" aria-hidden="true" id="login"></i>
+        </span>
+      </label>
+    </div>
+    <div class="popup__options">
+      <div class="options__remember">
+        <input type="checkbox" id="remember" />
+        <label for="remember" id="rememberlabel"></label>
+        Remeber me
+      </div>
+      <a href="" class="forget__pasword-login"> Forgot password </a>
+    </div>
+    <div class="popup__button button-gold">
+      <a>Log in</a>
+    </div>
+    <div class="popup__separator">
+      <div class="separator"></div>
+      <div class="separator__text">or</div>
+      <div class="separator"></div>
+    </div>
+    <div class="popup__services">
+      <div class="button-grey">
+        <a href="">
+          <img src="@img/google.svg" alt="google" />
+          Google
+        </a>
+      </div>
+      <div class="button-grey">
+        <a href="">
+          <img src="@img/facebook.svg" alt="facebook" />
+          Facebook
+        </a>
+      </div>
+      <div class="button-grey">
+        <a href="">
+          <img src="@img/apple.svg" alt="apple" />
+          Apple
+        </a>
+      </input>
+    </div>
+  </form>
+  <div class="popup__login popup__login-signup">
+    Don't have an account? <a href="">Sign up</a>
+  </div>
+</div>
+
+<div class="popup popup__forgot">
+  <div class="popup__close">
+    <span class="close__line close__line-1"> </span>
+    <span class="close__line close__line-2"></span>
+  </div>
+  <div class="forgot__title">Forgot password?</div>
+  <p class="subtext">
+    Enter the email associated with your account and we'll send an email with
+    instructions to reset your password.
+  </p>
+  <form action="">
+    <div>
+      <label for="">
+        Email
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter yours email"
+        />
+      </label>
+    </div>
+    <div class="button-gold forgot__submit">
+      <a href="">Send instructions</a>
+    </div>
+  </form>
+  <div class="popup__login popup__login-login">
+    Do have an account? <a href="">Log in</a>
+  </div>
+</div>
+
+<div class="popup popup__code">
+  <div class="popup__close">
+    <span class="close__line close__line-1"> </span>
+    <span class="close__line close__line-2"></span>
+  </div>
+  <div class="code__title">Check your email</div>
+  <p class="subtext">We sent a code to name@gmail.com to reset your password</p>
+  <form action="">
+    <div>
+      <label for="">
+        Code
+        <input type="text" name="code" id="code" placeholder="Enter code" />
+      </label>
+    </div>
+    <div class="button-gold" class="code__back">
+      <a href="">Back to Log in</a>
+    </div>
+  </form>
+  <div class="popup__login popup__login-forget">
+    Don't receive the email? <a href="">Click to resend</a>
+  </div>
+</div>

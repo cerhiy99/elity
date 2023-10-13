@@ -1,0 +1,60 @@
+@import "_var";
+
+.policy {
+  margin-bottom: 50px;
+
+  &__container {
+    max-width: 800px !important;
+    display: flex;
+    padding: 32px;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__disable {
+    display: flex;
+    gap: 10px;
+    margin-left: 32px;
+    margin-bottom: 10px;
+    a {
+      color: color(greywhite);
+      text-decoration: none;
+      transition: all 0.2s;
+
+      @media screen and (any-hover: hover) {
+        &:hover {
+          color: color(black);
+        }
+      }
+    }
+  }
+
+  &__active {
+    a {
+      text-decoration: none;
+      color: color(black);
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    a {
+      width: 100%;
+      display: inline;
+    }
+  }
+  .acordion-left {
+    cursor: pointer;
+    a {
+      color: color(blue);
+      text-decoration: none;
+    }
+  }
+  &__date {
+    display: flex;
+    h2 {
+      font-weight: 500;
+    }
+  }
+}

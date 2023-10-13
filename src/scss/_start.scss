@@ -1,0 +1,36 @@
+@import "_var";
+
+.start {
+  margin: 100px 32px 40px 32px;
+  padding: 80px;
+  background-color: color(human);
+  border-radius: 4px;
+  @media screen and (max-width: $bpsm) {
+    padding: 40px 20px;
+    margin: 0px;
+    margin-top: 40px;
+  }
+  &__container {
+  }
+
+  &__info {
+    text-align: center;
+    .title {
+      margin-bottom: 15px;
+    }
+    .subtext {
+      margin-bottom: 30px;
+    }
+    .info {
+      &__text {
+        display: inline-block;
+        position: relative;
+        img {
+          position: absolute;
+          right: 0px;
+          z-index: -1;
+        }
+      }
+    }
+  }
+}

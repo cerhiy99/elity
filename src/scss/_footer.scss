@@ -1,0 +1,165 @@
+@import "_var";
+
+.footer {
+  border-top: 1px solid color(greywhite);
+  &__container {
+    padding: 16px;
+
+    margin-bottom: 60px;
+  }
+
+  &__menu {
+    display: flex;
+    gap: 20px;
+    @media screen and (max-width: $bpmd) {
+      flex-wrap: wrap;
+    }
+
+    .menu {
+      &__social {
+        flex: 1 1 25%;
+        @media screen and (max-width: $bpmd) {
+          flex: 1 1 100%;
+          align-items: center;
+          flex-direction: row-reverse;
+          display: flex;
+        }
+
+        .social {
+          &__block {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            @media screen and (max-width: $bpmd) {
+              flex: 1 1 100%;
+              flex-direction: row-reverse;
+              align-items: center;
+            }
+          }
+          &__link {
+            a {
+              display: flex;
+              align-items: center;
+              gap: 6px;
+              @media screen and (max-width: $bpmd) {
+                p {
+                  display: none;
+                }
+              }
+            }
+          }
+
+          &__logo {
+            margin-top: 30px;
+            @media screen and (max-width: $bpmd) {
+              margin-top: 0px;
+            }
+          }
+        }
+      }
+
+      &__links {
+        flex: 1 1 15%;
+        @media screen and (max-width: $bpmd) {
+          flex: 1 1 33%;
+        }
+
+        ul {
+          display: flex;
+          gap: 10px;
+          flex-direction: column;
+        }
+        .links {
+          &__title {
+            font-weight: 500;
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: color(black);
+    transition: all 0.25s;
+    @media screen and (any-hover: hover) {
+      &:hover {
+        color: color(gold);
+      }
+    }
+  }
+}
+
+.underfooter {
+  &__container {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: $bpsm) {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+  }
+
+  &__menu {
+    ul {
+      display: flex;
+      gap: 15px;
+      .acordion {
+        margin-right: 30px !important;
+        @media screen and (max-width: $bplg) {
+          &::after {
+            width: 12px;
+            border-radius: 4px;
+            transition: all 0.25s;
+            height: 2px;
+            top: 8px;
+            right: -25px;
+            transform: rotate(-45deg);
+            background-color: color(black);
+          }
+          &::before {
+            transition: all 0.25s;
+            width: 12px;
+            border-radius: 4px;
+            height: 2px;
+            top: 8px;
+            right: -18px;
+            transform: rotate(45deg);
+            background-color: color(black);
+          }
+          @media screen and (any-hover: hover) {
+            &:hover {
+              .acordion__content {
+                visibility: visible;
+                opacity: 1;
+              }
+              &::before {
+                transform: rotate(-45deg);
+              }
+              &::after {
+                transform: rotate(45deg);
+              }
+            }
+          }
+        }
+        &__content {
+          top: -80px;
+        }
+      }
+    }
+    .menu {
+      &__lang {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+    }
+  }
+
+  &__copyright {
+    color: color(black);
+  }
+}

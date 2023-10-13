@@ -1,0 +1,52 @@
+@import "_var";
+
+.hero {
+  background-color: color(human);
+  padding: 16px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: calc(50px + 0 * ((100vw - 320px)) / (1200 - 320));
+    @media screen and (max-width: $bpmd) {
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__info {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    max-width: 40%;
+    @media screen and (max-width: $bpmd) {
+      max-width: 80%;
+      text-align: center;
+      align-items: center;
+    }
+    .info {
+      &__subtext {
+        margin-bottom: 15px;
+        color: color(grey);
+      }
+    }
+  }
+
+  &__poster {
+    img {
+      width: 100%;
+      max-width: 640px;
+      @media screen and (max-width: $bpmd) {
+        margin-top: 40px;
+        text-align: center;
+      }
+    }
+  }
+  .button-gold {
+    max-width: 200px;
+    @media screen and (max-width: $bpmd) {
+      margin-bottom: 40px;
+    }
+  }
+}

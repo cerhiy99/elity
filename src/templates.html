@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+  <head>
+    @@include('html/head.html',{"title": "Templates"})
+  </head>
+  <body style="height: 100%">
+    @@include('html/header.html',{})
+    <main>
+      @@include('html/hero.html', { "title": "Instagram Post", 
+      "subtext": "Create professional brand marketing materials, social media, documents and more ithout design skills.", 
+      "button": "", 
+      "img": "./img/hero-2.png" })
+      @@include('html/templates-posts.html',{})
+
+    </main>
+    @@include('html/footer.html',{}) @@include('html/popup.html',{})
+    @@include('html/popup-login.html',{})
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

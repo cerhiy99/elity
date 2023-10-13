@@ -1,0 +1,54 @@
+@import "_var";
+
+.content {
+  margin-top: 130px;
+  padding: 16px;
+  &__container {
+  }
+
+  &__galery {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    .galery {
+      &__item {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        @media screen and (max-width: $bpmd) {
+          flex-wrap: wrap;
+          justify-content: center;
+          text-align: center;
+        }
+        &-reverse {
+          flex-direction: row-reverse;
+        }
+        .item {
+          &__info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            flex: 1 1 50%;
+            .subtext {
+              @media screen and (max-width: $bpmd) {
+                max-width: 80%;
+                margin: 0 auto;
+              }
+            }
+          }
+
+          &__image {
+            max-width: 600px;
+
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.acordion-left {
+}

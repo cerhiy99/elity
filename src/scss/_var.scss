@@ -1,0 +1,78 @@
+//===================================================//
+
+// Font Family
+
+$fontFamily: Montserrat;
+
+//===================================================//
+
+// Containers
+
+$container: 1380px;
+
+//===================================================//
+
+// Breakpoints
+
+$bpxxl: 1400px;
+$bpxl: 1200px;
+$bplg: 992px;
+$bpmd: 768px;
+$bpsm: 576px;
+
+//===================================================//
+
+// Colors
+
+$colors: (
+  white: white,
+  black: #1f2128,
+  greywhite: #f1f4fa,
+  grey: #36373c,
+  gold: #ffce22,
+  separator: #e1e5ed,
+  blue: #4071e6,
+  human: #fdf8f3,
+  blueactive: #204aad,
+);
+
+$colors-dark: (
+  white: map-get($colors, black),
+  black: map-get($colors, white),
+  greywhite: map-get($colors, grey),
+  grey: map-get($colors, greywhite),
+  gold: map-get($colors, gold),
+  separator: map-get($colors, separator),
+  blue: map-get($colors, blue),
+  blueactive: map-get($colors, blueactive),
+  human: #927356,
+);
+
+:root {
+  @each $name, $color in $colors {
+    --color-#{"" + $name}: #{$color};
+  }
+  --theme: "light";
+}
+
+@media (prefers-color-scheme: darks) {
+  :root {
+    @each $name, $color in $colors-dark {
+      --color-#{"" + $name}: #{$color};
+    }
+    --theme: "dark";
+  }
+}
+
+@function color($color-name) {
+  @return var(--color-#{$color-name});
+}
+
+//===================================================//
+
+// Font size
+
+$fsdef: 16px;
+$fss: 12px;
+$fstitlem: 36px;
+$fstitle: 30px;

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include('html/head.html',{"title": "Main page"})
+  </head>
+  <body>
+    @@include('html/header.html',{})
+    <main>
+      @@include('html/hero.html', { "title": "Gorgeous onlnie graphic design platform", 
+      "subtext": "Create professional brand marketing materials, social media, documents and more ithout design skills.", 
+      "button": "Let's Start Free", 
+      "img": "./img/hero.png" })
+      @@include('html/tags.html',{}) @@include('html/templates.html',{})
+      @@include('html/content-post-1.html',{}) @@include('html/start.html',{})
+    </main>
+    @@include('html/footer.html',{}) @@include('html/popup.html',{})
+    @@include('html/popup-login.html',{})
+
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,216 @@
+@import "_var";
+
+.header {
+  transition: all 0.25s;
+  padding: 16px 32px;
+  background-color: color(white);
+  z-index: 2;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    @media screen and (max-width: $bpsm) {
+      justify-content: space-between;
+    }
+  }
+
+  &__auth {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    transition: all 0.25s;
+    z-index: 12;
+    transition: all 0.25s;
+
+    @media screen and (max-width: $bplg) {
+      position: absolute;
+      right: 80px;
+    }
+    @media screen and (max-width: $bpsm) {
+      visibility: hidden;
+      position: absolute;
+      bottom: 5px;
+      flex-direction: column;
+      padding: 16px;
+      left: 0;
+      transform: translate(0%, 100%);
+      width: calc(100% - 32px);
+    }
+    .auth {
+      &__login {
+        width: 100%;
+        text-align: center;
+
+        a {
+          text-decoration: none;
+          color: color(black);
+          transition: all 0.1s;
+          font-weight: 400;
+          @media screen and (max-width: $bpsm) {
+            background-color: color(gold);
+            border-radius: 4px;
+            width: 100%;
+            padding: 15px 0px;
+            display: inline-block;
+          }
+          @media screen and (min-width: $bpsm) {
+            @media screen and (any-hover: hover) {
+              &:hover {
+                font-weight: 500;
+              }
+            }
+          }
+        }
+      }
+
+      &__signup {
+        @media screen and (max-width: $bpsm) {
+          width: 100%;
+        }
+        button {
+          width: 100%;
+          text-align: center;
+        }
+
+        a {
+          text-decoration: none;
+          display: ruby;
+          color: color(black);
+        }
+      }
+    }
+  }
+
+  .menu {
+    &__burger {
+      display: flex;
+      gap: 8px;
+      flex-direction: column;
+      cursor: pointer;
+      @media screen and (min-width: $bplg) {
+        display: none;
+      }
+
+      .burger {
+        &__line {
+          width: 20.5px;
+          height: 2.5px;
+          background-color: color(black);
+          display: block;
+          border-radius: 4px;
+          transition: all 0.25s;
+        }
+
+        &__line-1 {
+        }
+
+        &__line-2 {
+        }
+
+        &__line-3 {
+        }
+      }
+    }
+
+    &__logo {
+    }
+
+    &__nav {
+      @media screen and (max-width: $bplg) {
+        visibility: hidden;
+        position: fixed;
+        width: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        height: 102%;
+        background-color: color(white);
+        margin-top: 18px;
+        z-index: 12;
+        left: 0;
+      }
+      @media screen and (max-width: $bpsm) {
+        padding-bottom: 330px;
+      }
+
+      .nav {
+        &__mobile {
+          display: none;
+          @media screen and (max-width: $bplg) {
+            padding-bottom: 250px;
+            display: initial;
+          }
+        }
+        &__separator {
+          margin-bottom: 32px;
+          position: relative;
+
+          span {
+            position: absolute;
+            width: calc(100vw - 16px);
+            left: -16px;
+            display: inline;
+          }
+        }
+      }
+      ul {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+        @media screen and (max-width: $bplg) {
+          flex-direction: column;
+          padding: 16px;
+          overflow: hidden;
+        }
+        @media screen and (any-hover: hover) {
+        }
+
+        li {
+          a {
+            text-decoration: none;
+            color: color(black);
+            transition: all 0.15s;
+            @media screen and (min-width: $bpsm) {
+              @media screen and (any-hover: hover) {
+                &:hover {
+                  color: color(gold);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+nav {
+  transition: all 0.25s;
+  @media screen and (min-width: $bplg) {
+    visibility: visible !important;
+    transform: translate(0%) !important;
+  }
+
+  @media screen and (max-width: $bplg) {
+    transform: translate(0%, 100%);
+  }
+  @media screen and (any-hover) {
+    max-width: 100%;
+  }
+}
+
+.sticky {
+  position: fixed;
+  width: calc(100%);
+  box-sizing: border-box;
+}
+
+.sticky + main {
+  padding-top: 70px;
+}
